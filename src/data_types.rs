@@ -303,3 +303,9 @@ macro_rules! time {
 
 #[allow(non_upper_case_globals)]
 pub const year: &'static str = "YEAR";
+
+#[allow(non_upper_case_globals)]
+pub const boolean: &'static str = "BOOL";
+
+#[allow(non_upper_case_globals)]
+pub const uuid: &'static str = "UUID";
