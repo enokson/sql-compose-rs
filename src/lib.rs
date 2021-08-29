@@ -1,4 +1,5 @@
 
+pub mod actions;
 pub mod commands;
 pub mod compose;
 pub mod conditions;
@@ -10,19 +11,19 @@ pub mod misc;
 pub mod modifiers;
 pub mod operators;
 
-pub use crate::commands::*;
-pub use crate::compose::*;
-pub use crate::conditions::*;
-pub use crate::constraints::*;
-pub use crate::data_types::*;
-pub use crate::fns::*;
-pub use crate::joins::*;
-pub use crate::misc::*;
-pub use crate::modifiers::*;
-pub use crate::operators::*;
 
 #[cfg(test)]
 mod tests {
+    pub use crate::commands::*;
+    pub use crate::compose::*;
+    pub use crate::conditions::*;
+    pub use crate::constraints::*;
+    pub use crate::data_types::*;
+    pub use crate::fns::*;
+    pub use crate::joins::*;
+    pub use crate::misc::*;
+    pub use crate::modifiers::*;
+    pub use crate::operators::*;
     // use super::{*, column};
 
 /*     #[test]
