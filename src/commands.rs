@@ -141,6 +141,9 @@ macro_rules! alter_column {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const select: &'static str = "SELECT";
+
 #[macro_export]
 macro_rules! select {
     ( $( $column:expr ),* ) => {{

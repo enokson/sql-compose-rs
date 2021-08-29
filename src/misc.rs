@@ -69,16 +69,6 @@ macro_rules! into {
     }};
 }
 
-#[allow(non_upper_case_globals)]
-pub const in_extern: &'static str = "IN";
-
-#[macro_export]
-macro_rules! in_extern {
-    ( $( $arg:expr ),* ) => {{
-        compose!(in_extern, join_args_with!(", " $(, $arg)*))
-    }};
-}
-
 #[macro_export]
 macro_rules! comment {
     ( $comment:expr ) => {{
@@ -95,3 +85,7 @@ macro_rules! references {
         compose!(references, join_args_with!(", " $(, $arg)*))
     }};
 }
+
+
+#[allow(non_upper_case_globals)]
+pub const not: &'static str = "NOT";

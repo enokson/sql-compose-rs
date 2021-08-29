@@ -1,3 +1,7 @@
+
+#[allow(non_upper_case_globals)]
+pub const where_clause: &'static str = "WHERE";
+
 #[macro_export]
 macro_rules! where_clause {
     ( $( $clause:expr ),* ) => {{
@@ -6,6 +10,9 @@ macro_rules! where_clause {
         format!("WHERE {}", tmp_vec.join(" AND "))
     }};
 }
+
+#[allow(non_upper_case_globals)]
+pub const and: &'static str = "AND";
 
 #[macro_export]
 macro_rules! and {
@@ -16,6 +23,9 @@ macro_rules! and {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const or: &'static str = "OR";
+
 #[macro_export]
 macro_rules! or {
     ( $( $arg:expr ),* ) => {{
@@ -25,8 +35,11 @@ macro_rules! or {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const _in: &'static str = "IN";
+
 #[macro_export]
-macro_rules! where_in {
+macro_rules! _in {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(tmp_vec.push($arg.to_string());)*
@@ -34,8 +47,11 @@ macro_rules! where_in {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const not_in: &'static str = "NOT IN";
+
 #[macro_export]
-macro_rules! where_not_in {
+macro_rules! not_in {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(tmp_vec.push($arg.to_string());)*
@@ -43,8 +59,11 @@ macro_rules! where_not_in {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const exists: &'static str = "EXISTS";
+
 #[macro_export]
-macro_rules! where_exists {
+macro_rules! exists {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(
@@ -54,8 +73,11 @@ macro_rules! where_exists {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const any: &'static str = "ANY";
+
 #[macro_export]
-macro_rules! where_any {
+macro_rules! any {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(
@@ -65,8 +87,11 @@ macro_rules! where_any {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const all: &'static str = "ALL";
+
 #[macro_export]
-macro_rules! where_all {
+macro_rules! all {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(
@@ -76,8 +101,11 @@ macro_rules! where_all {
     }};
 }
 
+#[allow(non_upper_case_globals)]
+pub const some: &'static str = "SOME";
+
 #[macro_export]
-macro_rules! where_some {
+macro_rules! some {
     ( $( $arg:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(
