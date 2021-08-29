@@ -1,9 +1,9 @@
 
 #[allow(non_upper_case_globals)]
-pub const where_clause: &'static str = "WHERE";
+pub const _where: &'static str = "WHERE";
 
 #[macro_export]
-macro_rules! where_clause {
+macro_rules! _where {
     ( $( $clause:expr ),* ) => {{
         let mut tmp_vec = Vec::new();
         $(tmp_vec.push($clause);)*
