@@ -11,6 +11,7 @@ pub mod misc;
 pub mod modifiers;
 pub mod operators;
 
+pub use crate::actions::*;
 pub use crate::commands::*;
 pub use crate::compose::*;
 pub use crate::conditions::*;
