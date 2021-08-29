@@ -166,6 +166,16 @@ macro_rules! insert_into {
     };
 }
 
+#[allow(non_upper_case_globals)]
+pub const delete: &'static str = "DELETE";
+
+#[macro_export]
+macro_rules! delete {
+    ( $( $arg:expr ),* ) => {
+        compose!(delete $(, $arg)*)
+    };
+}
+
 #[macro_export]
 macro_rules! delete_from {
     ( $table:expr ) => {
