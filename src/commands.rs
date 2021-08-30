@@ -186,6 +186,9 @@ macro_rules! delete_from {
     };
 }
 
+#[allow(non_upper_case_globals)]
+pub const update: &'static str = "UPDATE";
+
 #[macro_export]
 macro_rules! update {
     ( $table:expr ) => {
